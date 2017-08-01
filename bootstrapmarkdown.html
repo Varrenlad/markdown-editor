@@ -19,19 +19,60 @@
 	
 	
 	<script type="text/javascript">
-	  function fill(command){
-	  document.getElementById("plaintext").value = "";
-        switch (command){
+  const defines = 
+  '{"##":"bash",":>>":"cmd","```":"bold","!!!":"warning","!!":"note",":::":"mono","++":"link",".":"bullet","-->":"indent",".0":"number"}'
+
+
+  var iframe_content = "";
+  var iframe_queue = [];
+  var paragraph_storage = [];
+	  function fill(command) {
+      document.getElementById("plaintext").value = "";
+      switch (command) {
 		  case 1:
 		    document.getElementById("plaintext").value = "```Question" + '\n' + '\n' + "```Answer" + '\n'+ '\n';
 		    break;
 		  case 2:
-		  document.getElementById("plaintext").value = "```Symptoms" + '\n' + '\n' + "```Cause" + '\n' + '\n' + "```Resolution" + '\n' + '\n';
+		    document.getElementById("plaintext").value = "```Symptoms" + '\n' + '\n' + "```Cause" + '\n' + '\n' + "```Resolution" + '\n' + '\n';
 		    break;
 		  default:
 		    break;
-		}
+		  }
+    }
+
+    function prepare_iframe() {
+      iframe_content = document.createElement("iframe");
+      iframe_content.src = 'data:text/html;charset=utf-8,';
+    }
+
+    function update() {
+      if (iframe_content == 0) {
+        prepare_iframe();
       }
+      if (iframe_queue.length == 0)
+        store_paragraphs();
+      reparse("all");
+    }
+
+    function store_paragraphs() {
+      paragraph_storage = document.getElementById("plaintext").value.split('\n');
+    }
+
+    function reparse(paragraphs_to_reparse) {
+      if (paragraphs_to_reparse == "all"){
+        for (var i = 0; i < paragraph_storage.length; i++){ 
+          iframe_content.src += encodeURI("<h1>" + paragraph_storage[i] + "<h1>");
+        }
+        document.getElementById("iframe_location").appendChild(iframe_content);
+      }
+      else {
+
+      }
+    }  
+    
+/*    function parse(paragraph) {
+      if ()
+    }*/
 	</script>
 	
   </head>
@@ -59,7 +100,7 @@
 			<li role="separator" class="divider"></li>
             <li onclick="fill(2)"><a href="#">Problem/Issue/Resolving</a></li>
 			<li role="separator" class="divider"></li>
-            <li onclick="fill(3)"><a href="#">How-to</a></li>
+            <li onclick="fill(3)"><a href="#">Custom</a></li>
           </ul>
         </li>
       </ul>
