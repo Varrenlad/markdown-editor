@@ -9,7 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/additional.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -22,10 +22,11 @@
   const defines = 
   '{"##":"bash",":>>":"cmd","```":"bold","!!!":"warning","!!":"note",":::":"mono","++":"link",".":"bullet","-->":"indent",".0":"number"}'
 
-
+  var link = document.createElement("link");
   var iframe_content = "";
   var iframe_queue = [];
   var paragraph_storage = [];
+
 	  function fill(command) {
       document.getElementById("plaintext").value = "";
       switch (command) {
@@ -41,8 +42,12 @@
     }
 
     function prepare_iframe() {
+      link.setAttribute("rel", "stylesheet");
+      link.setAttribute("type", "text/css");
+      link.setAttribute("href", "css/bootstrap.min.css");
       iframe_content = document.createElement("iframe");
-      iframe_content.src = 'data:text/html;charset=utf-8,';
+      iframe_content.id = "ifr_data";
+      iframe_content.src = 'data:text/html;charset=utf-8,<head><link rel=\"stylesheet\" href=\"css/bootstrap.min.css\"></head><div class=\'container-fluid\'>';
     }
 
     function update() {
@@ -63,12 +68,14 @@
         for (var i = 0; i < paragraph_storage.length; i++){ 
           iframe_content.src += encodeURI("<h1>" + paragraph_storage[i] + "<h1>");
         }
+        iframe_content.src += encodeURI("</div>");
         document.getElementById("iframe_location").appendChild(iframe_content);
+        frames.document.head.appendChild(link);
       }
       else {
 
       }
-    }  
+    }
     
 /*    function parse(paragraph) {
       if ()
@@ -108,15 +115,9 @@
 	
       <div class="row">
         <div class="col-md-4">
-            Sidebar content
-			<div class="row">
-			  <textarea class="form-control" rows="40" id="plaintext" onchange="update()"></textarea>
-			</div>
+			    <textarea class="form-control" rows="40" id="plaintext" onchange="update()"></textarea>
         </div>
-        <div class="col-md-8">
-            Body content
-			<div id="iframe_location"></div>
-        </div>
+        <div class="col-md-8" id="iframe_location"></div>
       </div>
     </div>
 
