@@ -1,0 +1,18 @@
+body {
+  padding-top: 5rem;
+}
+.space_up {
+	margin-right: 0.5rem;
+}
+.fc-gray {
+	margin-right: 1rem;
+	color: #fff;
+}
+#textbox {
+    height: 86vh;
+}
+#ifr {
+	height: 86vh;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: .25rem;
+}
