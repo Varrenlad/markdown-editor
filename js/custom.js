@@ -1,5 +1,13 @@
+<<<<<<< HEAD
   var link = document.createElement("link");
   var link2 = document.createElement("link");
+=======
+	<script type="text/javascript">
+  const defines = 
+  '{"##":"bash",":>>":"cmd","```":"bold","!!!":"warning","!!":"note",":::":"mono","++":"link",".":"bullet","-->":"indent",".0":"number"}'
+
+  var link = document.createElement("link");
+>>>>>>> 9924bf09d9538657cefede69a0ebb80a475a145f
   var iframe_content = "";
   var iframe_queue = [];
   var paragraph_storage = [];
@@ -22,6 +30,7 @@
       link.setAttribute("rel", "stylesheet");
       link.setAttribute("type", "text/css");
       link.setAttribute("href", "css/bootstrap.min.css");
+<<<<<<< HEAD
       link2.setAttribute("rel", "stylesheet");
       link2.setAttribute("type", "text/css");
       link2.setAttribute("href", "css/iframe.css");
@@ -34,6 +43,11 @@
       document.getElementById("ifr").appendChild(iframe_content);
       frames.document.head.appendChild(link);
       frames.document.head.appendChild(link2);
+=======
+      iframe_content = document.createElement("iframe");
+      iframe_content.id = "ifr_data";
+      iframe_content.src = 'data:text/html;charset=utf-8,<head><link rel=\"stylesheet\" href=\"css/bootstrap.min.css\"></head><div class=\'container-fluid\'>';
+>>>>>>> 9924bf09d9538657cefede69a0ebb80a475a145f
     }
 
     function update() {
@@ -55,7 +69,11 @@
           iframe_content.src += encodeURI("<h1>" + paragraph_storage[i] + "<h1>");
         }
         iframe_content.src += encodeURI("</div>");
+<<<<<<< HEAD
         document.getElementById("ifr").appendChild(iframe_content);
+=======
+        document.getElementById("iframe_location").appendChild(iframe_content);
+>>>>>>> 9924bf09d9538657cefede69a0ebb80a475a145f
         frames.document.head.appendChild(link);
       }
       else {
@@ -66,6 +84,7 @@
 /*    function parse(paragraph) {
       if ()
     }*/
+<<<<<<< HEAD
 
   function doSearch(engine) {
     query = document.getElementById("searchText").value;
@@ -84,3 +103,6 @@
     }
     search_tab.focus();
   }
+=======
+	</script>
+>>>>>>> 9924bf09d9538657cefede69a0ebb80a475a145f
