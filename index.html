@@ -21,10 +21,10 @@
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
+		<a class="navbar-brand" href="#">KB Unofficial Text Editor</a>
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 		<ul class="navbar-nav fc-gray">
 			<li class="nav-item dropdown">
-<<<<<<< HEAD
 				<a class="nav-link dropdown-toggle" id="dropdown0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Useful links</a>
 			<div class="dropdown-menu" aria-labelledby="dropdown0">
 				<a class="dropdown-item" target="_blank" href="https://docs.plesk.ru/display/SUP/KCS+Style+Guide">KCS Style Guide</a>
@@ -32,26 +32,13 @@
 				<a class="dropdown-item" target="_blank" href="https://docs.plesk.ru/display/SUP/Content+standard">Content Standard</a>
 				<a class="dropdown-item" target="_blank" href="https://fe.plesk.com/my">File Share</a>
 				<a class="dropdown-item" target="_blank" href="https://pleskcom.sharepoint.com/sites/plesk-support/Shared Documents/FoodOrder_final_edition2.xlsx?web=1">FoodOrder Table</a>
-=======
-				<a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Useful links</a>
-			<div class="dropdown-menu" aria-labelledby="dropdown01">
-				<a class="dropdown-item" href="#">KCS Style Guide</a>
-				<a class="dropdown-item" href="#">KCS Simplification Guide</a>
-				<a class="dropdown-item" href="#">FoodOrder Table</a>
-				<a class="dropdown-item" href="#">MobaXTerm</a>
->>>>>>> 9924bf09d9538657cefede69a0ebb80a475a145f
 			</div>
 			</li>
 		</ul>
 		<ul class="navbar-nav fc-gray">
 			<li class="nav-item dropdown">
-<<<<<<< HEAD
 				<a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates</a>
 			<div class="dropdown-menu" aria-labelledby="dropdown1">
-=======
-				<a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates</a>
-			<div class="dropdown-menu" aria-labelledby="dropdown01">
->>>>>>> 9924bf09d9538657cefede69a0ebb80a475a145f
 				<a class="dropdown-item" href="#">Problem > Cause > Solution</a>
 				<a class="dropdown-item" href="#">Question > Answer</a>
 				<a class="dropdown-item" href="#">Empty page</a>
@@ -80,17 +67,11 @@
 		</form>
 		
 		<form class="form-inline my-2 my-lg-0">
-<<<<<<< HEAD
 			<input class="form-control mr-sm-2" type="text" placeholder="Search" id="searchText">
-			<button class="btn btn-outline-success my-2 my-sm-0 space_up" type="submit" onclick="doSearch(0)">Old Search</button>
-			<button class="btn btn-outline-warning my-2 my-sm-0 space_up" type="submit" onclick="doSearch(1)">New Search</button>
-			<button class="btn btn-outline-warning my-2 my-sm-0 space_up" type="submit" onclick="doSearch(2)">Jira Search</button>
+			<button class="btn btn-outline-success my-2 my-sm-0 space_up" type="submit" onclick="doSearch(0)">Old SE</button>
+			<button class="btn btn-outline-warning my-2 my-sm-0 space_up" type="submit" onclick="doSearch(1)">New SE</button>
+			<button class="btn btn-outline-primary my-2 my-sm-0 space_up" type="submit" onclick="doSearch(2)">Jira SE</button>
 
-=======
-			<input class="form-control mr-sm-2" type="text" placeholder="Search">
-			<button class="btn btn-outline-success my-2 my-sm-0 space_up" type="submit">Old Search</button>
-			<button class="btn btn-outline-warning my-2 my-sm-0 space_up" type="submit">New Search</button>
->>>>>>> 9924bf09d9538657cefede69a0ebb80a475a145f
 		</form>
 		</div>
 	</nav>
@@ -101,23 +82,22 @@
 				<div class="form-group">
 					<label for="textbox">Text editor</label>
 					<textarea class="form-control" id="textbox" rows="10"></textarea>
-<<<<<<< HEAD
 				</div>
 			</div>
 			<div class="col-md-8">
 				<label for="ifr">Live preview</label>
 				<div class="iframe_location" id="ifr"></div>
 			</div>
-		</div>
-=======
+			<div class="btn-group">
+				<div href="javascript:void(0)" class="btn btn-success btn-fab" id="main">
+					<!--<i class="material-icons">-->
+						<svg width="32px" height="44px" viewBox="0 -128 2048 1920">
+							<path d="M681 1399l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23t-10 23zm591-1067l-373 1291q-4 13-15.5 19.5t-23.5 2.5l-62-17q-13-4-19.5-15.5t-2.5-24.5l373-1291q4-13 15.5-19.5t23.5-2.5l62 17q13 4 19.5 15.5t2.5 24.5zm657 651l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23z"/>
+						</svg>
+					<!--</i>-->
 				</div>
 			</div>
-			<div class="col-md-8">
-				<label for="ifr">Live preview</label>
-				<div class="iframe_location" id="ifr"></div>
-			</div>
 		</div>
->>>>>>> 9924bf09d9538657cefede69a0ebb80a475a145f
 		
 
 	</div><!-- /.container -->
@@ -130,12 +110,9 @@
 	<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
-<<<<<<< HEAD
 	<script src="js/custom.js"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", prepare_iframe);
 	</script>
-=======
->>>>>>> 9924bf09d9538657cefede69a0ebb80a475a145f
 	</body>
 </html>
