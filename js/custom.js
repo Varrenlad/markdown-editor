@@ -1,8 +1,5 @@
-	<script type="text/javascript">
-  const defines = 
-  '{"##":"bash",":>>":"cmd","```":"bold","!!!":"warning","!!":"note",":::":"mono","++":"link",".":"bullet","-->":"indent",".0":"number"}'
-
   var link = document.createElement("link");
+  var link2 = document.createElement("link");
   var iframe_content = "";
   var iframe_queue = [];
   var paragraph_storage = [];
@@ -25,9 +22,18 @@
       link.setAttribute("rel", "stylesheet");
       link.setAttribute("type", "text/css");
       link.setAttribute("href", "css/bootstrap.min.css");
+      link2.setAttribute("rel", "stylesheet");
+      link2.setAttribute("type", "text/css");
+      link2.setAttribute("href", "css/iframe.css");
       iframe_content = document.createElement("iframe");
       iframe_content.id = "ifr_data";
-      iframe_content.src = 'data:text/html;charset=utf-8,<head><link rel=\"stylesheet\" href=\"css/bootstrap.min.css\"></head><div class=\'container-fluid\'>';
+      iframe_content.src = 'data:text/html;charset=utf-8,<head><link rel=\"stylesheet\" href=\"css/bootstrap.min.css\"> \
+      <link rel=\"stylesheet\" href=\"css/iframe.css\"></head><div class=\'container-fluid\' style=\"padding-right: 2.4rem;\";>\
+      <div style=\"width:100%;height:150%;border:20px solid #000;\">!';
+      iframe_content.src += encodeURI("</div>");
+      document.getElementById("ifr").appendChild(iframe_content);
+      frames.document.head.appendChild(link);
+      frames.document.head.appendChild(link2);
     }
 
     function update() {
@@ -49,7 +55,7 @@
           iframe_content.src += encodeURI("<h1>" + paragraph_storage[i] + "<h1>");
         }
         iframe_content.src += encodeURI("</div>");
-        document.getElementById("iframe_location").appendChild(iframe_content);
+        document.getElementById("ifr").appendChild(iframe_content);
         frames.document.head.appendChild(link);
       }
       else {
@@ -60,4 +66,21 @@
 /*    function parse(paragraph) {
       if ()
     }*/
-	</script>
+
+  function doSearch(engine) {
+    query = document.getElementById("searchText").value;
+    switch (engine) {
+      case 0:
+      var search_tab = window.open("https://support.plesk.com/hc/en-us/search?utf8=%E2%9C%93&query=" + query, '_blank');
+      break;
+      case 1:
+      var search_tab = window.open("https://support.plesk.com/hc/en-us/#iaf-nav:action=search&q=" + query + "&maxresults=100&regxpag=25", '_blank');
+      break;
+      case 2:
+      var search_tab = window.open("https://jira.plesk.ru/browse/PMT-3292?jql=text%20~%20%22" + query + "%22", '_blank');
+      break;
+      default:
+      break;
+    }
+    search_tab.focus();
+  }

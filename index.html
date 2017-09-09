@@ -24,19 +24,20 @@
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 		<ul class="navbar-nav fc-gray">
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Useful links</a>
-			<div class="dropdown-menu" aria-labelledby="dropdown01">
-				<a class="dropdown-item" href="#">KCS Style Guide</a>
-				<a class="dropdown-item" href="#">KCS Simplification Guide</a>
-				<a class="dropdown-item" href="#">FoodOrder Table</a>
-				<a class="dropdown-item" href="#">MobaXTerm</a>
+				<a class="nav-link dropdown-toggle" id="dropdown0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Useful links</a>
+			<div class="dropdown-menu" aria-labelledby="dropdown0">
+				<a class="dropdown-item" target="_blank" href="https://docs.plesk.ru/display/SUP/KCS+Style+Guide">KCS Style Guide</a>
+				<a class="dropdown-item" target="_blank" href="https://docs.plesk.ru/display/SUP/Article+simplification+guide">Simplification Guide</a>
+				<a class="dropdown-item" target="_blank" href="https://docs.plesk.ru/display/SUP/Content+standard">Content Standard</a>
+				<a class="dropdown-item" target="_blank" href="https://fe.plesk.com/my">File Share</a>
+				<a class="dropdown-item" target="_blank" href="https://pleskcom.sharepoint.com/sites/plesk-support/Shared Documents/FoodOrder_final_edition2.xlsx?web=1">FoodOrder Table</a>
 			</div>
 			</li>
 		</ul>
 		<ul class="navbar-nav fc-gray">
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates</a>
-			<div class="dropdown-menu" aria-labelledby="dropdown01">
+				<a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates</a>
+			<div class="dropdown-menu" aria-labelledby="dropdown1">
 				<a class="dropdown-item" href="#">Problem > Cause > Solution</a>
 				<a class="dropdown-item" href="#">Question > Answer</a>
 				<a class="dropdown-item" href="#">Empty page</a>
@@ -65,9 +66,11 @@
 		</form>
 		
 		<form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="text" placeholder="Search">
-			<button class="btn btn-outline-success my-2 my-sm-0 space_up" type="submit">Old Search</button>
-			<button class="btn btn-outline-warning my-2 my-sm-0 space_up" type="submit">New Search</button>
+			<input class="form-control mr-sm-2" type="text" placeholder="Search" id="searchText">
+			<button class="btn btn-outline-success my-2 my-sm-0 space_up" type="submit" onclick="doSearch(0)">Old Search</button>
+			<button class="btn btn-outline-warning my-2 my-sm-0 space_up" type="submit" onclick="doSearch(1)">New Search</button>
+			<button class="btn btn-outline-warning my-2 my-sm-0 space_up" type="submit" onclick="doSearch(2)">Jira Search</button>
+
 		</form>
 		</div>
 	</nav>
@@ -97,5 +100,9 @@
 	<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", prepare_iframe);
+	</script>
 	</body>
 </html>
