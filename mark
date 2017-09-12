@@ -1,0 +1,36 @@
+Header			##
+C:\>			``` cmd
+#				``` bash
+Note			>> 
+Warning			>>> 
+MYSQL_WIN		``` sqlwin\winsql
+MYSQL_LIN		``` sqllin\linsql
+PLESK_ERROR		``` pleskerror
+PLESK_INFO		``` pleskinfo
+CONFIG_TEXT		``` config
+Bold text 		** Bold text **
+Underlined text __ Underlined text __
+Numbered list 	1. 2. etc
+Bulleted list 	* * etc + " " if <br />
+Link			[Link text](http://link.nk)
+
+let flag_code = 0;
+let flag_mono = 0;
+let flag_list = 0; //can be up to ~10
+
+var text = document.getElementById("textbox").value;
+
+tokens = text.split('\n');
+
+for (let i = 0; i < tokens.length; ++i) {
+	if ( tokens[i].length == 0 ) { tokens[i] = "<br />"; }
+	else {
+		//rules processing
+		if ( let j = tokens[i].search('```') ){
+			//check ``` rules
+		}
+		if 
+
+
+	tokens[i] = "<br />"; }
+};

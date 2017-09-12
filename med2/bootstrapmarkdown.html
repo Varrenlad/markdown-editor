@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/additional.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+	<script type="text/javascript">
+  const defines = 
+  '{"##":"bash",":>>":"cmd","```":"bold","!!!":"warning","!!":"note",":::":"mono","++":"link",".":"bullet","-->":"indent",".0":"number"}'
+
+  var link = document.createElement("link");
+  var iframe_content = "";
+  var iframe_queue = [];
+  var paragraph_storage = [];
+
+	  function fill(command) {
+      document.getElementById("plaintext").value = "";
+      switch (command) {
+		  case 1:
+		    document.getElementById("plaintext").value = "```Question" + '\n' + '\n' + "```Answer" + '\n'+ '\n';
+		    break;
+		  case 2:
+		    document.getElementById("plaintext").value = "```Symptoms" + '\n' + '\n' + "```Cause" + '\n' + '\n' + "```Resolution" + '\n' + '\n';
+		    break;
+		  default:
+		    break;
+		  }
+    }
+
+    function prepare_iframe() {
+      link.setAttribute("rel", "stylesheet");
+      link.setAttribute("type", "text/css");
+      link.setAttribute("href", "css/bootstrap.min.css");
+      iframe_content = document.createElement("iframe");
+      iframe_content.id = "ifr_data";
+      iframe_content.src = 'data:text/html;charset=utf-8,<head><link rel=\"stylesheet\" href=\"css/bootstrap.min.css\"></head><div class=\'container-fluid\'>';
+    }
+
+    function update() {
+      if (iframe_content == 0) {
+        prepare_iframe();
+      }
+      if (iframe_queue.length == 0)
+        store_paragraphs();
+      reparse("all");
+    }
+
+    function store_paragraphs() {
+      paragraph_storage = document.getElementById("plaintext").value.split('\n');
+    }
+
+    function reparse(paragraphs_to_reparse) {
+      if (paragraphs_to_reparse == "all"){
+        for (var i = 0; i < paragraph_storage.length; i++){ 
+          iframe_content.src += encodeURI("<h1>" + paragraph_storage[i] + "<h1>");
+        }
+        iframe_content.src += encodeURI("</div>");
+        document.getElementById("iframe_location").appendChild(iframe_content);
+        frames.document.head.appendChild(link);
+      }
+      else {
+
+      }
+    }
+    
+/*    function parse(paragraph) {
+      if ()
+    }*/
+	</script>
+	
+  </head>
+  <body>
+  
+    
+    <div class="container-fluid">
+	<div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="https://plesk.zendesk.com/knowledge/articles/new/en-us?brand_id=848585">Add new KCB</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apply template <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li onclick="fill(1)"><a href="#">Question/Answer</a></li>
+			<li role="separator" class="divider"></li>
+            <li onclick="fill(2)"><a href="#">Problem/Issue/Resolving</a></li>
+			<li role="separator" class="divider"></li>
+            <li onclick="fill(3)"><a href="#">Custom</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+	
+      <div class="row">
+        <div class="col-md-4">
+			    <textarea class="form-control" rows="40" id="plaintext" onchange="update()"></textarea>
+        </div>
+        <div class="col-md-8" id="iframe_location"></div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
