@@ -45,28 +45,8 @@
 			</div>
 			</li>
 		</ul>
-		<form class="form-inline mr-auto">
-			<div class="form-check fc-gray">
-				<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					Default
-				</label>
-			</div>
-			<div class="form-check fc-gray">
-				<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-					Basic compatibility
-				</label>
-			</div>
-			<div class="form-check fc-gray">
-				<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
-					Full compatibility
-				</label>
-			</div>
-		</form>
 		
-		<form class="form-inline my-2 my-lg-0">
+		<form class="ml-auto form-inline my-2 my-lg-0">
 			<input class="form-control mr-sm-2" type="text" placeholder="Search" id="searchText">
 			<button class="btn btn-outline-success my-2 my-sm-0 space_up" type="submit" onclick="doSearch(0)">Old SE</button>
 			<button class="btn btn-outline-warning my-2 my-sm-0 space_up" type="submit" onclick="doSearch(1)">New SE</button>
@@ -81,12 +61,12 @@
 			<div class="col-md-4">
 				<div class="form-group">
 					<label for="textbox">Text editor</label>
-					<textarea class="form-control" id="textbox" rows="10"></textarea>
+					<textarea class="form-control" id="textbox"># header</textarea>
 				</div>
 			</div>
 			<div class="col-md-8">
-				<label for="ifr">Live preview</label>
-				<div class="iframe_location" id="ifr"></div>
+				<label for="parced-data">Live preview</label>
+				<div id="parced-data"></div>
 			</div>
 			<div class="btn-group">
 				<div href="javascript:void(0)" class="btn btn-success btn-fab" id="main">
@@ -106,13 +86,15 @@
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-	<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="js/jquery-3.1.1.slim.min.js"></script>
+	<script src="js/tether.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/showdown.min.js"></script>
 	<script>
-		document.addEventListener("DOMContentLoaded", prepare_iframe);
+		$('#textbox').on('input', function() {
+			mdparse();
+		});
 	</script>
 	</body>
 </html>
