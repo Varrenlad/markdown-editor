@@ -254,15 +254,15 @@ body {
     margin: 30px auto;
 }
 
-a:visited {
+.nd a:visited {
     color: white;
 }
 
-a:hover {
+.nds a:hover {
     color: white;
 }
 
-a:active {
+.nds a:active {
     color: white;
 }
 
