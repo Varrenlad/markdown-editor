@@ -4303,33 +4303,32 @@ p.bash {
   border: 1px solid #dbdbdb;
   min-width:10%;
   max-width:90%;
-  font-family: 'Menlo'!important;
+  font-family: 'Fira Mono';
 }
 
 /*windows shell style*/
 p.winshell {
     /*background: url('https://p14.zdassets.com/hc/theme_assets/1061516/200198925/cmd_2.png') no-repeat ;*/
-background:url('https://p14.zdassets.com/hc/theme_assets/1061516/200198925/cmd_1200.png') no-repeat;
+background:url('assets/cmd_1200.png') no-repeat;
     background-color:black;
     padding: 27px 5px 0 5px;
     border-radius: 1px;
     color: white;
     font-size:14px;
-    font-family: 'Lucida Console'!important;
-    min-width:10%;
+    font-family: 'Fira Mono';
     max-width:90%;
     border: 1px solid #000000;
     border-radius: 2px;
 }
 
 p.powershell {
-background:url('https://p14.zdassets.com/hc/theme_assets/1061516/200198925/powershell_1200.png') no-repeat;
+background:url('assets/powershell_1200.png') no-repeat;
     background-color:#012456;
     padding: 27px 5px 0 5px;
     border-radius: 1px;
     color: white;
     font-size:14px;
-    font-family: 'Lucida Console'!important;
+    font-family: 'Fira Mono';
     min-width:10%;
     max-width:90%;
     border: 1px solid #012456;
@@ -4338,7 +4337,7 @@ background:url('https://p14.zdassets.com/hc/theme_assets/1061516/200198925/power
 
 /* Plesk errors style*/
 p.pleskerr {
-      background: url('https://p14.zdassets.com/hc/theme_assets/1061516/200198925/plesk_error.png') no-repeat ;
+      background: url('assets/plesk_error.png') no-repeat ;
     /* display: block; */
   background-color:#F4B3B3;
   padding: 7px 10px 5px 31px;
@@ -4354,7 +4353,7 @@ p.pleskerr {
 }
 
 p.pleskwarn {
-  background: url('https://p14.zdassets.com/hc/theme_assets/1061516/200198925/plesk_warning.png') no-repeat ;
+  background: url('assets/plesk_warning.png') no-repeat ;
     /* display: block; */
   background-color:#FDD896;
   padding: 7px 10px 5px 31px;
@@ -4392,7 +4391,7 @@ p.configtext {
   border: 1px solid lightgray;
   min-width:10%;
   max-width:90%;
-  font-family: 'Menlo'!important;
+  font-family: 'Fira Mono';
 }
 
 p.warning {
@@ -4418,76 +4417,28 @@ p.note {
 }
 
 p.note a {
-  
-  color:white!important;
+  color:white;
 }
 
 /* Redesign of default pre and code items */
 
 pre {
- background-color:#F9F9F9!important;
- padding: 0px 5px 0 5px!important;
- border-radius: 2px!important;
- color: black!important;
+ background-color:#F9F9F9;
+ padding: 0px 5px 0 5px;
+ border-radius: 2px;
+ color: black;
 /*    margin: -5px!important; */
- font-family: 'Menlo'!important;
- border: 1px solid lightgray!important;
- min-width:10%!important;
- max-width:90%!important;
+ font-family: 'Fira Mono';
+ border: 1px solid lightgray;
+ min-width:10%;
+ max-width:90%;
 }
 
 code {
- color:black!important;
- background-color:transparent!important;
- font-family:'Menlo'!important;
+ color:black;
+ background-color:transparent;
+ font-family:'Fira Mono';
  /*font-size:14px!important;*/
-}
-
-/* buttons */
-
-.contact-plesk {
-/* background:url('https://p14.zdassets.com/hc/theme_assets/1061516/200198925/contact_plesk.png') no-repeat;
- background-size:contain;*/
- padding:15px;10px;
- max-width:250px;
- color:white;
- background:#52bce6;
- border-radius:4px;
- /*width:50px;
- height:40px;*/
- margin:auto;
-}
-
-.chat-plesk {
- /*background:url('https://p14.zdassets.com/hc/theme_assets/1061516/200198925/chat_with_plesk.png') no-repeat;
- background-size:contain;
- width:50px;
- height:40px;
-  
- */
-  
- padding:15px;10px;
- max-width:250px;
- color:white;
- background:#52bce6;
- border-radius:4px;
- margin:auto;
-}
-
-.Licensing.and.Online.Sales.questions {
- background:url('https://p14.zdassets.com/hc/theme_assets/1061516/200198925/licensing.png') no-repeat;
- background-size:contain;
- width:100px;
- height:81px;
- margin:auto;
-}
-
-.Technical.questions {
- background:url('https://p14.zdassets.com/hc/theme_assets/1061516/200198925/technical_questions.png') no-repeat;
- background-size:contain;
- width:100px;
- height:81px;
- margin:auto;
 }
 
 .KCS {
@@ -4523,7 +4474,7 @@ display:none!important;
 display:none!important;
 }
 
-/* Bug styling by Pavel */
+/* Bug styling by Pavel 
 
 .bug_note h3 {
  margin:0;
@@ -4585,12 +4536,4 @@ margin:10px 0 0 0!important;
    color: white;
 }
 
-input[type=checkbox] {
- width:20px;
-}
-
-/* Feedback style */
-
-.feedback-info-style {
-  	font-size: 28px;
-}
+*/
