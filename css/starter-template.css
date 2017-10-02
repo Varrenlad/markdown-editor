@@ -1,31 +1,31 @@
 body {
-	padding-top: 5rem;
-	overflow-x: hidden;
-	overflow-y: hidden;
+  padding-top: 5rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .space_up {
-	margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 .fc-gray {
-	margin-right: 1rem;
-	color: #fff;
+  margin-right: 1rem;
+  color: #fff;
 }
 #textbox {
     height: 86vh;
     resize: none;
 }
 #parced-data {
-	height: 86vh;
-	border: 1px solid rgba(0,0,0,.15);
-	border-radius: .25rem;
-	overflow-y: scroll;
-	overflow-x: hidden;
+  height: 86vh;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 #main{
-	position: fixed !important;
-	right: 35px;
-	bottom: 30px;
-	border-radius: 50%;
+  position: fixed !important;
+  right: 35px;
+  bottom: 30px;
+  border-radius: 50%;
 }
 
 #presentation{
@@ -119,7 +119,7 @@ body {
 
 .import {
   position: absolute;
-  margin-left: 4px;
+  margin-left: 10px;
   line-height: 65px;
   font-size: 38px !important; 
   color: #FFF;
@@ -128,7 +128,7 @@ body {
 .contact {
   position: absolute;
   text-decoration: none !important;
-  margin-left: 10px;
+  margin-left: 4px;
   line-height: 65px;
   font-size: 38px !important; 
   color: #FFF;
@@ -243,7 +243,7 @@ body {
 }
 
 .fullta {
-	resize: none;
+  resize: none;
     width: 100%;
     height: 75vh;
     border-color: #52bce6 !important;
@@ -278,7 +278,7 @@ body {
 }
 
 p {
-	word-break: break-all;
+  word-break: break-all;
 }
 
 /*Bash style by atumanov*/

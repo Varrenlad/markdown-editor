@@ -41,6 +41,8 @@ function parser() {
   var converter = new showdown.Converter();
   converter.setOption('simpleLineBreaks', true);
   converter.setOption('noHeaderId', true);
+  converter.setOption('literalMidWordUnderscores', true);
+  converter.setOption('literalMidWordAsterisks', true);
   let text      = document.getElementById("textbox").value;
   html          = converter.makeHtml(text);
 }
