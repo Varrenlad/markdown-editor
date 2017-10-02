@@ -37,14 +37,14 @@
 			</li>
 		</ul>
 		<ul class="navbar-nav fc-gray">
-			<!--<li class="nav-item dropdown">
+			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Templates</a>
 			<div class="dropdown-menu" aria-labelledby="dropdown1">
-				<a class="dropdown-item" href="#">Problem > Cause > Solution</a>
-				<a class="dropdown-item" href="#">Question > Answer</a>
-				<a class="dropdown-item" href="#">Empty page</a>
+				<a class="dropdown-item" href="#" onclick="template(0)">Symptom > Cause > Resolution</a>
+				<a class="dropdown-item" href="#" onclick="template(1)">Question > Answer</a>
+				<a class="dropdown-item" href="#" onclick="template(2)">Default page</a>
 			</div>
-			</li>-->
+			</li>
 		</ul>
 		
 		<form class="ml-auto form-inline my-2 my-lg-0">
@@ -62,7 +62,7 @@
 			<div class="col-md-4">
 				<div class="form-group">
 					<label for="textbox">Markdown editor</label>
-					<textarea class="form-control" id="textbox"># header</textarea>
+					<textarea class="form-control" id="textbox"></textarea>
 				</div>
 			</div>
 			<div class="col-md-8">
@@ -111,7 +111,7 @@
 						<h4 class="modal-title">Import from HTML</h4>
 					</div>
 					<div class="modal-body">
-						<textarea class="fullta" id="t-import"></textarea>
+						<textarea class="fullta" id="t-import"><p>Put HTML you want to convert here</p></textarea>
 					</div>
 					<div class="modal-footer">
 						<div class="mr-auto">
@@ -134,7 +134,7 @@
 	<script src="js/showdown.min.js"></script>
 	<script src="js/to-markdown.js"></script>
 	<script>
-		document.addEventListener("DOMContentLoaded", mdparse);
+		document.addEventListener("DOMContentLoaded", template(2));
 	</script>
 	<script>
 		$('#textbox').on('input', function() {
