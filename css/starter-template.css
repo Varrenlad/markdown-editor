@@ -1,49 +1,36 @@
 body {
-  padding-top: 5rem;
+  padding-top: 4.5rem;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
+
 .space_up {
   margin-right: 0.5rem;
 }
+
 .fc-gray {
   margin-right: 1rem;
   color: #fff;
 }
+
 #textbox {
-    height: 86vh;
-    resize: none;
+  height: 87vh;
+  resize: none;
 }
+
 #parced-data {
-  height: 86vh;
+  height: 87vh;
+  padding: 1rem;
   border: 1px solid rgba(0,0,0,.15);
   border-radius: .25rem;
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
 #main{
   position: fixed !important;
   right: 35px;
   bottom: 30px;
   border-radius: 50%;
-}
-
-#presentation{
-  width: 480px;
-  height: 120px;
-  padding: 20px;
-  margin: auto;
-  background: #FFF;
-  margin-top: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
-  transition: all 0.3s; 
-  border-radius: 3px;
-}
-
-#presentation:hover{
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  transition: all 0.3s;
-  transform: translateZ(10px);
 }
 
 #floating-button{
@@ -60,18 +47,10 @@ body {
 
 .plus{
   color: white;
-  position: absolute;
-  top: 0;
-  display: block;
-  bottom: 0;
-  left: 0;
-  right: 0;
   text-align: center;
-  padding: 0;
-  margin: 0;
-  line-height: 55px;
-  font-size: 38px !important;
-  margin-top: 8px; 
+  font-size: 40px !important;
+  margin-top: 8px;
+  margin-left: 11px;
   animation: plus-out 0.3s;
   transition: all 0.3s;
 }
@@ -98,16 +77,8 @@ body {
 
 .edit{
   position: absolute;
-  top: 0;
-  display: block;
-  bottom: 0;
   left: 0;
-  display: block;
-  right: 0;
-  padding: 0;
   opacity: 0;
-  margin: auto;
-  line-height: 65px;
   transform: rotateZ(-70deg);
   transition: all 0.3s;
   animation: edit-out 0.3s;
@@ -199,7 +170,6 @@ body {
 }
 
 #container-floating:hover .nds{
-  
   animation: bounce-nds 0.1s linear;
   animation-fill-mode:  forwards;
 }
@@ -208,45 +178,16 @@ body {
   animation-delay: 0.08s;
 }
 
-.letter{
-  font-size: 23px;
-  font-family: 'Roboto';
-  color: white;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0;
-  top: 0;
-  bottom: 0;
-  text-align: center;
-  line-height: 40px;
-}
-
-.reminder{
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  line-height: 40px;
-}
-
-.profile{
-  border-radius: 50%;
-  width: 40px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  right: 20px;
-}
-
-.fullta {
+.fullwta {
   resize: none;
-    width: 100%;
-    height: 75vh;
-    border-color: #52bce6 !important;
+  width: 100%;
+  border-color: #52bce6 !important;
+}
+
+.fullhta {
+  resize: none;
+  height: 75vh;
+  border-color: #52bce6 !important;
 }
 
 .modal-dialog {
@@ -266,7 +207,7 @@ body {
     color: white;
 }
 
-/* Here comes Plesk KCS CSS kit. KIT w/ it */
+/* Here comes Plesk KCS CSS kit. KIT w/ it 
 @font-face {
     font-family: "Open Sans";
     src: url('../fonts/OpenSans-Regular.woff2') format("woff2");
@@ -275,7 +216,7 @@ body {
 @font-face {
     font-family: "Fira Mono";
     src: url('../fonts/FiraMono-Regular.woff2') format("woff2");
-}
+}*/
 
 p {
   word-break: break-all;
@@ -283,53 +224,49 @@ p {
 
 /*Bash style by atumanov*/
 p.bash {
-    background: url('../assets/bash_gray.png') no-repeat ;
-    /* display: block; */
-    padding: 27px 5px 0 5px;
-    background-color: #f5f5f5;
-    border-radius: 3px;
-    font-size: 14px;
-    color: #333333;
-/*    margin: -5px!mportant; */
+  background: url('../assets/bash_gray.png') no-repeat ;
+  padding: 27px 5px 0 5px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #333333;
   border: 1px solid #dbdbdb;
   min-width:10%;
-  max-width:90%;
-  font-family: 'Fira Mono';
+  max-width:100%;
+  font-family: 'Inconsolata', monospace;
 }
 
 /*windows shell style*/
 p.winshell {
-    /*background: url('https://p14.zdassets.com/hc/theme_assets/1061516/200198925/cmd_2.png') no-repeat ;*/
-background:url('../assets/cmd_1200.png') no-repeat;
-    background-color:black;
-    padding: 27px 5px 0 5px;
-    border-radius: 1px;
-    color: white;
-    font-size:14px;
-    font-family: 'Fira Mono';
-    max-width:90%;
-    border: 1px solid #000000;
-    border-radius: 2px;
+  background:url('../assets/cmd_1200.png') no-repeat;
+  background-color:black;
+  padding: 27px 5px 0 5px;
+  border-radius: 1px;
+  color: white;
+  font-size:14px;
+  font-family: 'Inconsolata', monospace;
+  max-width:100%;
+  border: 1px solid #000000;
+  border-radius: 2px;
 }
 
 p.powershell {
-background:url('../assets/powershell_1200.png') no-repeat;
-    background-color:#012456;
-    padding: 27px 5px 0 5px;
-    border-radius: 1px;
-    color: white;
-    font-size:14px;
-    font-family: 'Fira Mono';
-    min-width:10%;
-    max-width:90%;
-    border: 1px solid #012456;
-    border-radius: 2px;
+  background:url('../assets/powershell_1200.png') no-repeat;
+  background-color:#012456;
+  padding: 27px 5px 0 5px;
+  border-radius: 1px;
+  color: white;
+  font-size:14px;
+  font-family: 'Inconsolata', monospace;
+  min-width:10%;
+  max-width:100%;
+  border: 1px solid #012456;
+  border-radius: 2px;
 }
 
 /* Plesk errors style*/
 p.pleskerr {
-      background: url('../assets/plesk_error.png') no-repeat ;
-    /* display: block; */
+  background: url('../assets/plesk_error.png') no-repeat ;
   background-color:#F4B3B3;
   padding: 7px 10px 5px 31px;
   border-radius: 2px;
@@ -339,13 +276,12 @@ p.pleskerr {
   border: 1px solid lightgray;
   border-color:#F4B3B3; 
   min-width:10%;
-  max-width:90%;
-  font-family: 'Open Sans', arial;
+  max-width:100%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 p.pleskwarn {
   background: url('../assets/plesk_warning.png') no-repeat ;
-    /* display: block; */
   background-color:#FDD896;
   padding: 7px 10px 5px 31px;
   border-radius: 2px;
@@ -355,21 +291,19 @@ p.pleskwarn {
   border: 1px solid;
   border-color:#FDD896; 
   min-width:10%;
-  max-width:90%;
-  font-family: 'Open Sans', arial;
+  max-width:100%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 p.pleskinfo {
- background-color:#F9F9F9;
+  background-color:#F9F9F9;
   padding: 0px 5px 0 5px;
   border-radius: 2px;
   color: black;
   font-size:14px;
-/*    margin: -5px!important; */
   border: 1px solid lightgray;
   min-width:10%;
-  max-width:90%;
- /* font-family: 'Open Sans', arial;*/
+  max-width:100%;
 }
 
 p.configtext {
@@ -378,11 +312,10 @@ p.configtext {
   border-radius: 2px;
   color: black;
   font-size:14px;
-/*    margin: -5px!important; */
   border: 1px solid lightgray;
   min-width:10%;
-  max-width:90%;
-  font-family: 'Fira Mono';
+  max-width:100%;
+  font-family: 'Inconsolata', monospace;
 }
 
 p.warning {
@@ -392,7 +325,7 @@ p.warning {
   border-radius:2px;
   color:black;
   min-width:10%;
-  max-width:90%;
+  max-width:100%;
   text-align:left;
 }
 
@@ -403,7 +336,7 @@ p.note {
   border-radius:2px;
   color:black;
   min-width:10%;
-  max-width:90%;
+  max-width:100%;
   text-align:left;
 }
 
@@ -414,20 +347,22 @@ p.note a {
 /* Redesign of default pre and code items */
 
 pre {
- background-color:#F9F9F9;
- padding: 0px 5px 0 5px;
- border-radius: 2px;
- color: black;
-/*    margin: -5px!important; */
- font-family: 'Fira Mono';
- border: 1px solid lightgray;
- min-width:10%;
- max-width:90%;
+  background-color:#F9F9F9;
+  padding: 0px 5px 0 5px;
+  border-radius: 2px;
+  color: black;
+  font-family: 'Inconsolata', monospace;
+  border: 1px solid lightgray;
+  min-width:10%;
+  max-width:100%;
 }
 
 code {
- color:black;
- background-color:transparent;
- font-family:'Fira Mono';
- /*font-size:14px!important;*/
+  color:black;
+  background-color:transparent;
+  font-family:'Inconsolata', monospace;
+}
+
+img {
+  max-width:100%;
 }
