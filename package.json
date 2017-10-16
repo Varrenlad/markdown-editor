@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@rmp135/vue-splitter": "^1.2.1",
+    "bulma": "^0.6.0",
+    "css-loader": "^0.28.7",
+    "markdown-it": "^8.4.0",
+    "vue": "^2.5.2",
+    "vue-bulma-components": "^1.5.0",
+    "vue-bulma-notification": "^1.1.1",
+    "vue-loader": "^13.3.0",
+    "vue-localstorage": "^0.4.2",
+    "vue-template-compiler": "^2.5.2",
+    "webpack": "^3.7.1"
+  }
+}
